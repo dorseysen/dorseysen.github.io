@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/dynamicScreenshots.css">
+    <title>视频动态截图</title>
+</head>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <input type="file" id="input" hidden>
+            <video src="../assets/123.mp4" controls class="video"></video>
+            <button>上传视频</button>
+        </div>
+        <div class="screenshot-list screenshotList"></div>
+    </div>
+    <script type="module">
+
+        import videoCapture from '../js/dynamicScreenshots/dynamicScreenshots.js';
+
+        let Dom = document.querySelector('.container');
+
+        new videoCapture({ Dom });
+        
+    </script>
+</body>
+</html>

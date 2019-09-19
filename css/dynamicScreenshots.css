@@ -1,0 +1,42 @@
+html,body,div,video,button{
+    margin:0;
+    padding:0;
+}
+.container{
+    width: 1000px;
+    /* overflow: hidden; */
+    height: 600px;
+    margin: 100px auto;
+    border: 1px solid #ccc;
+}
+.video-container{
+    width: 66%;
+    float: left;
+}
+.video{
+    width: 100%;
+    height: 540px;
+}
+button{
+    width: 100%;
+    line-height: 40px;
+    border: none;
+    cursor: pointer;
+}
+.screenshot-list{
+    width: 34%;
+    height: 100%;
+    float: right;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: .5s;
+}
+.pd10{
+    height: 100px;
+    padding: 5px 10px;
+}
+.pd10 img{
+    width: 100%;
+    height: 100%;
+}
