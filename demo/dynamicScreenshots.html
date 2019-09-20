@@ -21,9 +21,10 @@
 
         import videoCapture from '../js/dynamicScreenshots/dynamicScreenshots.js';
 
-        let Dom = document.querySelector('.container');
+        let Dom = document.querySelector('.container'),
+            speed = 2;
 
-        new videoCapture({ Dom });
+        new videoCapture({ Dom, speed });
         
     </script>
 </body>
