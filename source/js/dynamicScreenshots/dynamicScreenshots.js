@@ -4,6 +4,8 @@ class videoCapture {
 
         this.Dom = options.Dom;
 
+        this.speed = options.speed || 2;
+
         this.input = this.Dom.querySelector('input');
         this.btn = this.Dom.querySelector('button');
         this.video = this.Dom.querySelector('video');
@@ -59,17 +61,17 @@ class videoCapture {
 
         _self.video.addEventListener('timeupdate', function (e) {
 
-            _self.ctx.drawImage(this, 0, 0, this.videoWidth, this.videoHeight);
-
-            let src = _self.canvas.toDataURL('image/jpeg');
-
             if(this.currentTime > nowTime){
+
+                _self.ctx.drawImage(this, 0, 0, this.videoWidth, this.videoHeight);
+
+                let src = _self.canvas.toDataURL('image/jpeg');
 
                 _self.appendImg(src);
                 
-                nowTime += 2;
+                nowTime += _self.speed;
             }
-        })
+        });
     }
     appendImg (src) {
 
